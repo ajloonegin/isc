@@ -23,22 +23,22 @@ public class BasicController {
 	
 	@GetMapping(value = "/books")
 	public String books() {
-		return "books list";
+		return "list of books";
 	}
 
 	@GetMapping(value = "/books/{id}")
 	public String get(@PathVariable final long id) {
-		return "get book " + id;
+		return "get a specific Book with id " + id;
 	}
 	
 	@PostMapping(value = "/books")
 	public String add() {
-		return "POST book";
+		return "POST some books";
 	}
 
 	@PutMapping(value = "/books/{id}")
 	public String put(@PathVariable final long id) {
-		return "update book " + id;
+		return "PUT within single method " + id;
 	}
 
 
@@ -46,7 +46,7 @@ public class BasicController {
 
 	@DeleteMapping(value= "books/{id}")
 	public String deleteBook(@PathVariable final long id) {
-		return "delete book " + id;
+		return "delete within single method  " + id;
 	}
 	
 }
